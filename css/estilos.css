@@ -1,0 +1,125 @@
+body {
+    background-color: #f4f5f7;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.kanban-column {
+    background-color: #f8f9fa;
+    border-radius: 0.75rem;
+    height: calc(100vh - 280px);
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.kanban-cards-container {
+    overflow-y: auto;
+    flex-grow: 1;
+    min-height: 0;
+    padding-right: 6px;
+}
+
+.kanban-cards-container::-webkit-scrollbar {
+    width: 6px;
+}
+.kanban-cards-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+.kanban-cards-container::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 10px;
+}
+.kanban-cards-container::-webkit-scrollbar-thumb:hover {
+    background-color: #94a3b8;
+}
+
+.kanban-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+.kanban-card:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+.add-task-btn {
+    border: 1px dashed #cbd5e1;
+    color: #64748b;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+    font-size: 0.9rem;
+}
+
+.add-task-btn:hover {
+    background-color: #f1f5f9;
+    color: #334155;
+}
+
+.top-navbar {
+    background-color: white;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.col-header-border {
+    border-top: 3px solid transparent;
+}
+.border-backlog { border-top-color: #6c757d; }
+.border-todo { border-top-color: #0d6efd; }
+.border-inprogress { border-top-color: #ffc107; }
+.border-done { border-top-color: #198754; }
+
+.tag-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.3rem 0.6rem;
+    border-radius: 1rem;
+}
+
+.priority-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.priority-baja { background-color: #d1e7dd; color: #0f5132; }
+.priority-media { background-color: #fff3cd; color: #664d03; }
+.priority-alta { background-color: #f8d7da; color: #842029; }
+
+.progress-bar-custom {
+    height: 8px;
+    border-radius: 4px;
+}
+
+.dropdown-toggle-custom::after {
+    display: none;
+}
+
+.btn-options {
+    color: #94a3b8;
+    padding: 0 0.5rem;
+}
+.btn-options:hover {
+    color: #334155;
+}
+
+.date-text {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+main {
+    flex: 1;
+}
